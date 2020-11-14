@@ -1,0 +1,2 @@
+include LICENSE
+include tap_auth0_logs_checkpoint/schemas/*.json

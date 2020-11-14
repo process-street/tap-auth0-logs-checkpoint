@@ -1,0 +1,66 @@
+{
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "type": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "connection": {
+      "type": "string"
+    },
+    "connection_id": {
+      "type": "string"
+    },
+    "client_id": {
+      "type": "string"
+    },
+    "client_name": {
+      "type": "string"
+    },
+    "ip": {
+      "type": "string"
+    },
+    "hostname": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
+    },
+    "user_name": {
+      "type": "string"
+    },
+    "audience": {
+      "type": "string"
+    },
+    "scope": {
+      "type": ["array", "string"]
+    },
+    "strategy": {
+      "type": "string"
+    },
+    "strategy_type": {
+      "type": "string"
+    },
+    "log_id": {
+      "type": "string"
+    },
+    "isMobile": {
+      "type": "boolean"
+    },
+    "details": {
+      "type": "object"
+    },
+    "user_agent": {
+      "type": "string"
+    },
+    "location_info": {
+      "type": "object"
+    }
+  }
+}
