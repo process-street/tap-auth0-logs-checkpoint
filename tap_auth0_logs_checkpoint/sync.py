@@ -33,10 +33,9 @@ def sync(config, state, catalog):
 
         auth0 = get_auth0_client(config)
 
-        LOGGER.info("SEARCH request with {params}".format(params=params))
-
         with singer.metrics.record_counter(tap_stream_id) as counter:
             while True:
+                LOGGER.info("SEARCH request with {params}".format(params=params))
                 results = auth0.logs.search(**params)
 
                 LOGGER.info('Found {} results'.format(len(results)))
@@ -52,6 +51,9 @@ def sync(config, state, catalog):
 
                 state = singer.write_bookmark(state, tap_stream_id, 'last_log_id', max_bookmark)
                 singer.write_state(state)
+
+                if counter.value > 40000:
+                    return
 
                 params = {
                     'take': config['per_page'],

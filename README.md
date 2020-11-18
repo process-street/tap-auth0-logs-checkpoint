@@ -6,12 +6,12 @@ spec](https://github.com/singer-io/getting-started/blob/master/SPEC.md).
 
 This tap:
 
-- Pulls raw data from [FIXME](http://example.com)
+- Pulls raw data from [Auth0](http://auth0.com)
 - Extracts the following resources:
-  - [FIXME](http://example.com)
+  - [Logs](https://auth0.com/docs/api/management/v2/#!/Logs/get_logs)
 - Outputs the schema for each resource
 - Incrementally pulls data based on the input state
 
 ---
 
-Copyright &copy; 2018 Stitch
+Copyright &copy; 2020 Process Street
